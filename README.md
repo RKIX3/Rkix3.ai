@@ -146,3 +146,7 @@ Pull request, ý tưởng workflow, template CLI, prompt mẫu và sponsor đề
 <div align="center">
   <sub>Made with 💙 for RKIX3 — AI-first, mobile-first, automation-first.</sub>
 </div>
+
+![Auto Assign](https://github.com/RKIX3/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
+
+![Proof HTML](https://github.com/RKIX3/demo-repository/actions/workflows/proof-html.yml/badge.svg)
