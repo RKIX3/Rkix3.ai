@@ -1,11 +1,29 @@
 name: Proof HTML
+
 on:
   push:
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: anishathalye/proof-html@v1.1.0
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          directory: ./
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build RKIX3 app
+        run: npm run build
+
+      - name: Proof HTML
+        uses: anishathalye/proof-html@v1.1.0
+        with:
+          directory: ./dist
